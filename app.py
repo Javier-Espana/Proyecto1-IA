@@ -32,11 +32,11 @@ if query:
     with st.spinner("Generando resumen..."):
         summary = generate_summary(full_text, OPENAI_API_KEY)
 
-    st.subheader("📝 Resumen")
+    st.subheader("Resumen")
     st.markdown(summary)
 
     with st.spinner("Creando nube de palabras..."):
         fig = create_wordcloud(full_text)
 
-    st.subheader("☁️ Nube de Palabras")
+    st.subheader("Nube de Palabras")
     st.pyplot(fig)
