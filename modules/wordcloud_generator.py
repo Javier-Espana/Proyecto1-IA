@@ -1,7 +1,7 @@
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
-def crear_nube_de_palabras(texto):
+def create_wordcloud(texto):
     """
     Genera una figura de nube de palabras a partir del texto dado.
 
@@ -11,7 +11,7 @@ def crear_nube_de_palabras(texto):
     Devuelve:
         matplotlib.figure.Figure: Una figura de Matplotlib que contiene la nube de palabras.
     """
-    nube_de_palabras = WordCloud(
+    wordcloud  = WordCloud(
         width=800,
         height=400,
         background_color='white',
@@ -21,7 +21,7 @@ def crear_nube_de_palabras(texto):
 
     # Crear una figura de Matplotlib
     figura, eje = plt.subplots(figsize=(10, 5))
-    eje.imshow(nube_de_palabras, interpolation='bilinear')
+    eje.imshow(wordcloud , interpolation='bilinear')
     eje.axis("off")
     plt.tight_layout(pad=0)
 

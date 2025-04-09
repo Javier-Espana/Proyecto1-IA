@@ -1,7 +1,7 @@
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 
-def generar_resumen(contenido, clave_api):
+def generate_summary(contenido, clave_api):
     """
     Genera un resumen del contenido dado utilizando OpenAI a través de LangChain.
 
@@ -20,12 +20,12 @@ def generar_resumen(contenido, clave_api):
     )
 
     # Componer el mensaje
-    mensajes = [
+    messages = [
         SystemMessage(content="Eres un asistente de investigación útil."),
         HumanMessage(content=f"Por favor, resume la siguiente información:\n\n{contenido}")
     ]
 
     # Obtener la respuesta
-    respuesta = chat(mensajes)
+    response = chat(messages)
 
-    return respuesta.content
+    return response.content
